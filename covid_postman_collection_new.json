@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "5c34d3d3-a04c-4dcf-918a-bbf06f2bebfb",
+		"name": "covid",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Covid19",
+			"item": [
+				{
+					"name": "Corona Stats",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{uri}}api/v1/cases/general-stats",
+							"host": [
+								"{{uri}}api"
+							],
+							"path": [
+								"v1",
+								"cases",
+								"general-stats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Country Stats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{uri}}api/v1/cases/countries-search?country=Spain",
+							"host": [
+								"{{uri}}api"
+							],
+							"path": [
+								"v1",
+								"cases",
+								"countries-search"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "Spain"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
